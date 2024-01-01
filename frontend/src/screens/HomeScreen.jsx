@@ -7,6 +7,7 @@ import { Loader } from "../components/Loader";
 import { Message } from "../components/Message";
 import { Paginate } from "../components/Paginate";
 import { ProductCarousel } from "../components/ProductCarousel";
+import { Banner } from "../components/Banner";
 import { Meta } from "../components/Meta";
 
 export const HomeScreen = () => {
@@ -20,7 +21,7 @@ export const HomeScreen = () => {
   return (
     <>
       {!keyword ? (
-        <ProductCarousel />
+        <Banner />
       ) : (
         <Link to="/" className="btn btn-light mb-4">
           Go Back
