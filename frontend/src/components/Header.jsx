@@ -43,6 +43,12 @@ export const Header = () => {
               <img src={logo} alt="AsiaBuy" />
             </Navbar.Brand>
           </LinkContainer>
+          <Nav className="me-auto">
+            <Nav.Link href="/">TRANG CHỦ</Nav.Link>
+            <Nav.Link href="/aboutus">GIỚI THIỆU</Nav.Link>
+            <Nav.Link href="/news">TIN TỨC</Nav.Link>
+            <Nav.Link href="/pricing">PHÍ VẬN CHUYỂN</Nav.Link>
+          </Nav>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="ms-auto">

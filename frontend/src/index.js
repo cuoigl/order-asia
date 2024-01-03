@@ -37,6 +37,10 @@ import { ProductEditScreen } from "./screens/admin/ProductEditScreen";
 import { UserListScreen } from "./screens/admin/UserListScreen";
 import { UserEditScreen } from "./screens/admin/UserEditScreen";
 
+import { New } from "./screens/New";
+import { AboutUs } from "./screens/AboutUs";
+import { Pricing } from "./screens/Pricing";
+
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<App />}>
@@ -51,6 +55,9 @@ const router = createBrowserRouter(
       <Route path="/cart" element={<CartScreen />} />
       <Route path="/login" element={<LoginScreen />} />
       <Route path="/register" element={<RegisterScreen />} />
+      <Route path="/aboutus" element={<AboutUs />} />
+      <Route path="/news" element={<New />} />
+      <Route path="/pricing" element={<Pricing />} />
 
       {/* Registered users */}
       <Route path="" element={<PrivateRoute />}>

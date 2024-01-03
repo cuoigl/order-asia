@@ -8,10 +8,11 @@ import { toast } from "react-toastify";
 import {
   useGetProductDetailsQuery,
   useUpdateProductMutation,
-  useUploadProductImageMutation,
 } from "../../slices/productsApiSlice";
+import axios from "axios";
 
 export const ProductEditScreen = () => {
+  const endpoint = "https://api.cloudinary.com/v1_1/dqqkpaowz/image/upload";
   const { id: productId } = useParams();
 
   const [name, setName] = useState("");
@@ -32,8 +33,7 @@ export const ProductEditScreen = () => {
   const [updateProduct, { isLoading: loadingUpdate }] =
     useUpdateProductMutation();
 
-  const [uploadProductImage, { isLoading: loadingUpload }] =
-    useUploadProductImageMutation();
+  const [loadingUploadImg, setIsLoadingUploadImg] = useState(false);
 
   const navigate = useNavigate();
 
@@ -70,14 +70,35 @@ export const ProductEditScreen = () => {
     }
   }, [product]);
 
+  // const uploadFileHandler = async (e) => {
+  //   const formData = new FormData();
+  //   formData.append("image", e.target.files[0]);
+  //   try {
+  //     const res = await uploadProductImage(formData).unwrap();
+  //     toast.success(res.message);
+  //     setImage(res.image);
+  //   } catch (err) {
+  //     toast.error(err?.data?.message || err.error);
+  //   }
+  // };
+
   const uploadFileHandler = async (e) => {
+    setIsLoadingUploadImg(true);
     const formData = new FormData();
-    formData.append("image", e.target.files[0]);
+    formData.append("file", e.target.files[0]);
+    console.log(e.target.files[0]);
+    formData.append("upload_preset", "ufnmc8mr");
+    formData.append("folder", "asiabuy");
     try {
-      const res = await uploadProductImage(formData).unwrap();
-      toast.success(res.message);
-      setImage(res.image);
+      const { data } = await axios.post(endpoint, formData, {
+        headers: {
+          "Content-Type": "multipart/form-data",
+        },
+      });
+      setImage(data.url);
+      setIsLoadingUploadImg(false);
     } catch (err) {
+      setIsLoadingUploadImg(false);
       toast.error(err?.data?.message || err.error);
     }
   };
@@ -129,7 +150,7 @@ export const ProductEditScreen = () => {
                 onChange={uploadFileHandler}
                 type="file"
               ></Form.Control>
-              {loadingUpload && <Loader />}
+              {loadingUploadImg && <Loader />}
             </Form.Group>
 
             <Form.Group controlId="brand">
