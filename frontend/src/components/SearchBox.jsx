@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Form, Button } from "react-bootstrap";
 import { useParams } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
+import { FaSearch } from "react-icons/fa";
 
 export const SearchBox = () => {
   const navigate = useNavigate();
@@ -27,11 +28,11 @@ export const SearchBox = () => {
         name="q"
         onChange={(e) => setKeyword(e.target.value)}
         value={keyword}
-        placeholder="Search Products..."
+        placeholder="Nhập tên sản phẩm ..."
         className="mr-sm-2 ml-sm-5"
       ></Form.Control>
-      <Button type="submit" variant="outline-success" className="p-2 mx-2">
-        Search
+      <Button type="submit" variant="outline-secondary" className="p-2 mx-2">
+        <FaSearch />
       </Button>
     </Form>
   );

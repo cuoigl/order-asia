@@ -11,6 +11,7 @@ import {
   Button,
   Form,
 } from "react-bootstrap";
+import Modal from "react-bootstrap/Modal";
 import { toast } from "react-toastify";
 import {
   useGetProductDetailsQuery,
@@ -27,6 +28,7 @@ export const ProductScreen = () => {
 
   const dispatch = useDispatch();
   const navigate = useNavigate();
+  const [modalShow, setModalShow] = useState(false);
 
   const [qty, setQty] = useState(1);
   const [rating, setRating] = useState(0);
@@ -67,10 +69,40 @@ export const ProductScreen = () => {
     }
   };
 
+  function MyVerticallyCenteredModal(props) {
+    return (
+      <Modal
+        {...props}
+        size="lg"
+        aria-labelledby="contained-modal-title-vcenter"
+        centered
+      >
+        <Modal.Header closeButton>
+          <Modal.Title id="contained-modal-title-vcenter">
+            Thông tin liên hệ
+          </Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          <p>
+            Địa chỉ văn phòng: 110 Ngũ Hành Sơn, Phường Mỹ An, Quận Ngũ Hành
+            Sơn, Thành phố Đà Nẵng, Vietnam. <br />
+            Hotline: 0796 690 609 <br />
+            G.Đốc: 0933 244 852 (Mr.Tuấn) <br />
+            P.kinh doanh: 0934 095 782 (Miss.Huệ)
+            <br /> Gmail: asiabuy.logistics01@gmail.com.
+          </p>
+        </Modal.Body>
+        <Modal.Footer>
+          <Button onClick={props.onHide}>Close</Button>
+        </Modal.Footer>
+      </Modal>
+    );
+  }
+
   return (
     <>
       <Link className="btn btn-light my-3" to="/">
-        Go Back
+        Quay lại
       </Link>
       {isLoading ? (
         <Loader />
@@ -96,7 +128,7 @@ export const ProductScreen = () => {
                     text={`${product.numReviews} reviews`}
                   />
                 </ListGroup.Item>
-                <ListGroup.Item>Price: ${product.price}</ListGroup.Item>
+
                 <ListGroup.Item>
                   Description: {product.description}
                 </ListGroup.Item>
@@ -107,23 +139,25 @@ export const ProductScreen = () => {
                 <ListGroup variant="flush">
                   <ListGroup.Item>
                     <Row>
-                      <Col>Price:</Col>
+                      <Col>Giá:</Col>
                       <Col>
-                        <strong>${product.price}</strong>
+                        {/* <strong>${product.price}</strong> */}
+                        <strong>Liên hệ để được báo giá</strong>
                       </Col>
                     </Row>
                   </ListGroup.Item>
                   <ListGroup.Item>
                     <Row>
-                      <Col>Status:</Col>
+                      <Col>Trạng thái:</Col>
                       <Col>
-                        {product.countInStock > 0 ? "In Stock" : "Out Of Stock"}
+                        {/* {product.countInStock > 0 ? "In Stock" : "Out Of Stock"} */}
+                        Còn hàng
                       </Col>
                     </Row>
                   </ListGroup.Item>
 
                   {/* Qty Select */}
-                  {product.countInStock > 0 && (
+                  {/* {product.countInStock > 0 && (
                     <ListGroup.Item>
                       <Row>
                         <Col>Qty</Col>
@@ -144,23 +178,34 @@ export const ProductScreen = () => {
                         </Col>
                       </Row>
                     </ListGroup.Item>
-                  )}
+                  )} */}
 
                   <ListGroup.Item>
-                    <Button
+                    {/* <Button
                       className="btn-block"
                       type="button"
                       disabled={product.countInStock === 0}
                       onClick={addToCartHandler}
                     >
                       Add To Cart
+                    </Button> */}
+                    <Button
+                      className="btn-block"
+                      type="button"
+                      onClick={() => setModalShow(true)}
+                    >
+                      Liên hệ
                     </Button>
+                    <MyVerticallyCenteredModal
+                      show={modalShow}
+                      onHide={() => setModalShow(false)}
+                    />
                   </ListGroup.Item>
                 </ListGroup>
               </Card>
             </Col>
           </Row>
-          <Row className="review">
+          {/* <Row className="review">
             <Col md={6}>
               <h2>Reviews</h2>
               {product.reviews.length === 0 && <Message>No Reviews</Message>}
@@ -222,7 +267,7 @@ export const ProductScreen = () => {
                 </ListGroup.Item>
               </ListGroup>
             </Col>
-          </Row>
+          </Row> */}
         </>
       )}
     </>

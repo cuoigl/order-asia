@@ -1,5 +1,41 @@
-import React from "react";
+import Col from "react-bootstrap/Col";
+import Nav from "react-bootstrap/Nav";
+import Row from "react-bootstrap/Row";
+import Tab from "react-bootstrap/Tab";
+
+import { News } from "../components/News";
 
 export const New = () => {
-  return <div>New</div>;
+  return (
+    <Tab.Container id="left-tabs-example" defaultActiveKey="customer">
+      <Row>
+        <Col sm={3}>
+          <Nav variant="pills" className="flex-column">
+            <Nav.Item>
+              <Nav.Link eventKey="customer">News</Nav.Link>
+            </Nav.Item>
+            <Nav.Item>
+              <Nav.Link eventKey="ship">Vận chuyển</Nav.Link>
+            </Nav.Item>
+            <Nav.Item>
+              <Nav.Link eventKey="product">Hàng hoá</Nav.Link>
+            </Nav.Item>
+          </Nav>
+        </Col>
+        <Col sm={9}>
+          <Tab.Content>
+            <Tab.Pane eventKey="customer">
+              <News />
+            </Tab.Pane>
+            <Tab.Pane eventKey="ship">
+              <News />
+            </Tab.Pane>
+            <Tab.Pane eventKey="product">
+              <News />
+            </Tab.Pane>
+          </Tab.Content>
+        </Col>
+      </Row>
+    </Tab.Container>
+  );
 };

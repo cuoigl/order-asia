@@ -36,24 +36,24 @@ export const Header = () => {
 
   return (
     <header>
-      <Navbar bg="dark" variant="dark" expand="lg" collapseOnSelect>
+      <Navbar bg="nav" variant="light" expand="lg" collapseOnSelect>
         <Container>
           <LinkContainer to="/">
             <Navbar.Brand>
               <img src={logo} alt="AsiaBuy" />
             </Navbar.Brand>
           </LinkContainer>
-          <Nav className="me-auto">
-            <Nav.Link href="/">TRANG CHỦ</Nav.Link>
-            <Nav.Link href="/aboutus">GIỚI THIỆU</Nav.Link>
-            <Nav.Link href="/news">TIN TỨC</Nav.Link>
-            <Nav.Link href="/pricing">PHÍ VẬN CHUYỂN</Nav.Link>
-          </Nav>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
+            <Nav className="me-auto">
+              <Nav.Link href="/">TRANG CHỦ</Nav.Link>
+              <Nav.Link href="/aboutus">GIỚI THIỆU</Nav.Link>
+              <Nav.Link href="/news">TIN TỨC</Nav.Link>
+              <Nav.Link href="/pricing">PHÍ VẬN CHUYỂN</Nav.Link>
+            </Nav>
             <Nav className="ms-auto">
               <SearchBox />
-              <LinkContainer to="/cart">
+              {/* <LinkContainer to="/cart">
                 <Nav.Link>
                   <FaShoppingCart /> Cart
                   {cartItems.length > 0 && (
@@ -62,7 +62,7 @@ export const Header = () => {
                     </Badge>
                   )}
                 </Nav.Link>
-              </LinkContainer>
+              </LinkContainer> */}
               {userInfo ? (
                 <>
                   <NavDropdown title={userInfo.name} id="username">
@@ -77,7 +77,7 @@ export const Header = () => {
               ) : (
                 <LinkContainer to="/login">
                   <Nav.Link>
-                    <FaUser /> Sign In
+                    <FaUser /> Đăng nhập
                   </Nav.Link>
                 </LinkContainer>
               )}
