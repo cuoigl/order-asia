@@ -46,10 +46,18 @@ export const Header = () => {
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
-              <Nav.Link href="/">TRANG CHỦ</Nav.Link>
-              <Nav.Link href="/aboutus">GIỚI THIỆU</Nav.Link>
-              <Nav.Link href="/news">TIN TỨC</Nav.Link>
-              <Nav.Link href="/pricing">PHÍ VẬN CHUYỂN</Nav.Link>
+              <LinkContainer to="/">
+                <Nav.Link>TRANG CHỦ</Nav.Link>
+              </LinkContainer>
+              <LinkContainer to="/aboutus">
+                <Nav.Link>GIỚI THIỆU</Nav.Link>
+              </LinkContainer>
+              <LinkContainer to="/news">
+                <Nav.Link>TIN TỨC</Nav.Link>
+              </LinkContainer>
+              <LinkContainer to="/pricing">
+                <Nav.Link>PHÍ VẬN CHUYỂN</Nav.Link>
+              </LinkContainer>
             </Nav>
             <Nav className="ms-auto">
               <SearchBox />
