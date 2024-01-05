@@ -1,5 +1,8 @@
 import React from "react";
-import { Container } from "react-bootstrap";
+import { Container, Row, Col, Image } from "react-bootstrap";
+import qrzalo from "../assets/qr_zalo.jpg";
+import gioithieu1 from "../assets/gioithieu1.jpg";
+import gioithieu2 from "../assets/gioithieu2.jpg";
 
 export const AboutUs = () => {
   return (
@@ -33,6 +36,16 @@ export const AboutUs = () => {
         <li>Vận chuyển hàng hóa bằng đường bộ: 5 - 10 ngày.</li>
       </ul>
 
+      <div>
+        <Image src={gioithieu1} rounded />
+        <Image
+          className="ms-1"
+          style={{ width: "450px" }}
+          src={gioithieu2}
+          rounded
+        />
+      </div>
+
       <h5>Lợi thế của chúng tôi:</h5>
       <ul>
         <li>
@@ -50,18 +63,25 @@ export const AboutUs = () => {
         </li>
         <li>Giao hàng tận kho/ tận tay khách hàng.</li>
       </ul>
-      <p>
-        Liên hệ với ASIABUY để được tư vấn và hỗ trợ mua hộ hàng hóa Trung Quốc
-        ngay hôm nay!
-      </p>
-      <p>
-        Địa chỉ văn phòng: 110 Ngũ Hành Sơn, Phường Mỹ An, Quận Ngũ Hành Sơn,
-        Thành phố Đà Nẵng, Vietnam. <br />
-        Hotline: 0796 690 609 <br />
-        G.Đốc: 0933 244 852 (Mr.Tuấn) <br />
-        P.kinh doanh: 0934 095 782 (Miss.Huệ)
-        <br /> Gmail: asiabuy.logistics01@gmail.com.
-      </p>
+      <Row className="container">
+        <Col lg={6}>
+          <p>
+            Liên hệ với ASIABUY để được tư vấn và hỗ trợ mua hộ hàng hóa Trung
+            Quốc ngay hôm nay!
+          </p>
+          <p>
+            Địa chỉ văn phòng: 110 Ngũ Hành Sơn, Phường Mỹ An, Quận Ngũ Hành
+            Sơn, Thành phố Đà Nẵng, Vietnam. <br />
+            Hotline: 0796 690 609 <br />
+            G.Đốc: 0933 244 852 (Mr.Tuấn) <br />
+            P.kinh doanh: 0934 095 782 (Miss.Huệ)
+            <br /> Gmail: asiabuy.logistics01@gmail.com.
+          </p>
+        </Col>
+        <Col lg={6}>
+          <Image style={{ width: "250px" }} src={qrzalo} rounded />
+        </Col>
+      </Row>
     </Container>
   );
 };

@@ -51,3 +51,15 @@ table th {
   bottom: 0;
   background: rgba(0, 0, 0, 0.5);
 }
+
+.nav-fontweight {
+  font-weight: 500 !important;
+}
+
+.icon-footer {
+  font-size: 25px;
+}
+
+.background-footer {
+  background-color: aliceblue;
+}

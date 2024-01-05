@@ -40,23 +40,23 @@ export const Header = () => {
         <Container>
           <LinkContainer to="/">
             <Navbar.Brand>
-              <img src={logo} alt="AsiaBuy" />
+              <img style={{ width: "100px" }} src={logo} alt="AsiaBuy" />
             </Navbar.Brand>
           </LinkContainer>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
               <LinkContainer to="/">
-                <Nav.Link>TRANG CHỦ</Nav.Link>
+                <Nav.Link className="nav-fontweight">TRANG CHỦ</Nav.Link>
               </LinkContainer>
               <LinkContainer to="/aboutus">
-                <Nav.Link>GIỚI THIỆU</Nav.Link>
+                <Nav.Link className="nav-fontweight">GIỚI THIỆU</Nav.Link>
               </LinkContainer>
               <LinkContainer to="/news">
-                <Nav.Link>TIN TỨC</Nav.Link>
+                <Nav.Link className="nav-fontweight">TIN TỨC</Nav.Link>
               </LinkContainer>
               <LinkContainer to="/pricing">
-                <Nav.Link>PHÍ VẬN CHUYỂN</Nav.Link>
+                <Nav.Link className="nav-fontweight">PHÍ VẬN CHUYỂN</Nav.Link>
               </LinkContainer>
             </Nav>
             <Nav className="ms-auto">
