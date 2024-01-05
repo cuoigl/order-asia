@@ -31,10 +31,18 @@ export const Footer = () => {
               referrerPolicy="no-referrer-when-downgrade"
             ></iframe>
           </Col>
-          <Col className="py-3">
-            <div className="icon-footer">
-              <a href="https://www.facebook.com/profile.php?id=61554296982095">
-                <FaFacebookF />
+          <Col lg={3} className="py-3">
+            <div className=" d-flex">
+              <a href="https://www.facebook.com/asiabuy.logistics">
+                <div className="icon-footer">
+                  <FaFacebookF />
+                </div>
+              </a>
+              <a
+                style={{ lineHeight: "40px", marginLeft: "8px" }}
+                href="https://www.facebook.com/asiabuy.logistics"
+              >
+                fb.com/asiabuy.logistics
               </a>
             </div>
             <div className="icon-footer">

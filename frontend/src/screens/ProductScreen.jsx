@@ -38,11 +38,13 @@ export const ProductScreen = () => {
         </Modal.Header>
         <Modal.Body>
           <p>
-            Địa chỉ văn phòng: 110 Ngũ Hành Sơn, Phường Mỹ An, Quận Ngũ Hành
-            Sơn, Thành phố Đà Nẵng, Vietnam. <br />
+            ĐĐịa chỉ văn phòng: 110 Ngũ Hành Sơn, Phường Mỹ An, Quận Ngũ Hành
+            Sơn, Thành phố Đà Nẵng, Vietnam. Sơn, Thành phố Đà Nẵng, Vietnam.{" "}
+            <br />
             Hotline: 0796 690 609 <br />
-            G.Đốc: 0933 244 852 (Mr.Tuấn) <br />
-            P.kinh doanh: 0934 095 782 (Miss.Huệ)
+            Giám đốc: 0933 244 852 (Ms.Thoan)
+            <br />
+            P.kinh doanh: 0934 095 782 (Mis.Huệ)
             <br /> Gmail: asiabuy.logistics01@gmail.com.
           </p>
         </Modal.Body>

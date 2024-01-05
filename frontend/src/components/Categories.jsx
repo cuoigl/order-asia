@@ -1,13 +1,11 @@
-import React, { useState } from "react";
+import React from "react";
 import { useNavigate } from "react-router-dom";
 import { Message } from "../components/Message";
 import { useGetCategoriesQuery } from "../slices/productsApiSlice";
 import { Button } from "react-bootstrap";
-import { useParams } from "react-router-dom";
 
 export const Categories = () => {
   const navigate = useNavigate();
-  const { category: urlCategory } = useParams();
 
   const submitHandler = (e) => {
     navigate(`/categories/${e.target.value.trim()}`);
