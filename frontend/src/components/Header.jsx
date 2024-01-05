@@ -1,5 +1,5 @@
-import { Navbar, Nav, Container, NavDropdown, Badge } from "react-bootstrap";
-import { FaShoppingCart, FaUser } from "react-icons/fa";
+import { Navbar, Nav, Container, NavDropdown } from "react-bootstrap";
+import { FaUser } from "react-icons/fa";
 import { LinkContainer } from "react-router-bootstrap";
 
 import { useSelector, useDispatch } from "react-redux";
@@ -13,7 +13,6 @@ import logo from "../assets/logo.png";
 import { resetCart } from "../slices/cartSlice";
 
 export const Header = () => {
-  const { cartItems } = useSelector((state) => state.cart);
   const { userInfo } = useSelector((state) => state.auth);
 
   const dispatch = useDispatch();
@@ -75,10 +74,10 @@ export const Header = () => {
                 <>
                   <NavDropdown title={userInfo.name} id="username">
                     <LinkContainer to="/profile">
-                      <NavDropdown.Item>Profile</NavDropdown.Item>
+                      <NavDropdown.Item>Cá nhân</NavDropdown.Item>
                     </LinkContainer>
                     <NavDropdown.Item onClick={logoutHandler}>
-                      Logout
+                      Đăng xuất
                     </NavDropdown.Item>
                   </NavDropdown>
                 </>
@@ -94,13 +93,10 @@ export const Header = () => {
               {userInfo && userInfo.isAdmin && (
                 <NavDropdown title="Admin" id="adminmenu">
                   <LinkContainer to="/admin/productlist">
-                    <NavDropdown.Item>Products</NavDropdown.Item>
-                  </LinkContainer>
-                  <LinkContainer to="/admin/orderlist">
-                    <NavDropdown.Item>Orders</NavDropdown.Item>
+                    <NavDropdown.Item>Sản phẩm</NavDropdown.Item>
                   </LinkContainer>
                   <LinkContainer to="/admin/userlist">
-                    <NavDropdown.Item>Users</NavDropdown.Item>
+                    <NavDropdown.Item>Người dùng</NavDropdown.Item>
                   </LinkContainer>
                 </NavDropdown>
               )}

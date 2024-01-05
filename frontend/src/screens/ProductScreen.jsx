@@ -88,25 +88,22 @@ export const ProductScreen = () => {
               </ListGroup>
             </Col>
             <Col md={3}>
-              <Card>
-                <ListGroup variant="flush">
-                  <ListGroup.Item>
-                    <Row>
-                      <Col>Giá:</Col>
-                      <Col>
-                        {/* <strong>${product.price}</strong> */}
-                        <strong>Liên hệ để được báo giá</strong>
-                      </Col>
-                    </Row>
-                  </ListGroup.Item>
-                  <ListGroup.Item>
-                    <Row>
-                      <Col>Trạng thái:</Col>
-                      <Col>Còn hàng</Col>
-                    </Row>
-                  </ListGroup.Item>
-
-                  <ListGroup.Item>
+              <Card style={{ backgroundColor: "#fae4d0" }}>
+                <Card.Body>
+                  {/* <strong>${product.price}</strong> */}
+                  <strong>Bạn cần báo giá sản phẩm vui lòng liên hệ</strong>
+                  <p
+                    style={{
+                      fontSize: "30px",
+                      color: "#ff914d",
+                      fontWeight: "700",
+                      textAlign: "center",
+                    }}
+                    className="pt-2 text-align"
+                  >
+                    0796690690
+                  </p>
+                  <div class="d-grid gap-2 col-6 mx-auto">
                     <Button
                       className="btn-block"
                       type="button"
@@ -114,12 +111,12 @@ export const ProductScreen = () => {
                     >
                       Liên hệ
                     </Button>
-                    <MyVerticallyCenteredModal
-                      show={modalShow}
-                      onHide={() => setModalShow(false)}
-                    />
-                  </ListGroup.Item>
-                </ListGroup>
+                  </div>
+                </Card.Body>
+                <MyVerticallyCenteredModal
+                  show={modalShow}
+                  onHide={() => setModalShow(false)}
+                />
               </Card>
             </Col>
           </Row>

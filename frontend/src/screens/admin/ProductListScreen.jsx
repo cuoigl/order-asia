@@ -51,11 +51,11 @@ export const ProductListScreen = () => {
     <>
       <Row className="align-items-center">
         <Col>
-          <h1>Products</h1>
+          <h1>Danh sách sản phẩm</h1>
         </Col>
         <Col className="text-end">
           <Button className="my-3" onClick={createProductHandler}>
-            <FaPlus /> Create Product
+            <FaPlus /> Thêm sản phẩm
           </Button>
         </Col>
       </Row>
@@ -72,10 +72,10 @@ export const ProductListScreen = () => {
             <thead>
               <tr>
                 <th>ID</th>
-                <th>NAME</th>
-                <th>PRICE</th>
-                <th>CATEGORY</th>
-                <th>BRAND</th>
+                <th>Tên sản phẩm</th>
+                <th>Giá</th>
+                <th>Loại hàng</th>
+                <th>Thương hiệu</th>
                 <th></th>
               </tr>
             </thead>

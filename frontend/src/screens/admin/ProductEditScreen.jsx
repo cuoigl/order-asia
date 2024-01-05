@@ -111,7 +111,7 @@ export const ProductEditScreen = () => {
         Go Back
       </Link>
       <FormContainer>
-        <h1>Edit Product</h1>
+        <h1>Chỉnh sửa sản phẩm</h1>
         {loadingUpdate && <Loader />}
         {isLoading ? (
           <Loader />
@@ -120,7 +120,7 @@ export const ProductEditScreen = () => {
         ) : (
           <Form onSubmit={submitHandler}>
             <Form.Group controlId="name">
-              <Form.Label>Name</Form.Label>
+              <Form.Label>Tên sản phẩm</Form.Label>
               <Form.Control
                 type="name"
                 placeholder="Enter name"
@@ -130,7 +130,7 @@ export const ProductEditScreen = () => {
             </Form.Group>
 
             <Form.Group controlId="price">
-              <Form.Label>Price</Form.Label>
+              <Form.Label>Giá</Form.Label>
               <Form.Control
                 type="number"
                 placeholder="Enter price"
@@ -140,7 +140,7 @@ export const ProductEditScreen = () => {
             </Form.Group>
 
             <Form.Group controlId="image">
-              <Form.Label>Image</Form.Label>
+              <Form.Label>Hình ảnh (size 640 × 510)</Form.Label>
               <Form.Control
                 type="text"
                 placeholder="Enter image url"
@@ -156,7 +156,7 @@ export const ProductEditScreen = () => {
             </Form.Group>
 
             <Form.Group controlId="brand">
-              <Form.Label>Brand</Form.Label>
+              <Form.Label>Thương hiệu</Form.Label>
               <Form.Control
                 type="text"
                 placeholder="Enter brand"
@@ -166,7 +166,7 @@ export const ProductEditScreen = () => {
             </Form.Group>
 
             <Form.Group controlId="countInStock">
-              <Form.Label>Count In Stock</Form.Label>
+              <Form.Label>Số lượng</Form.Label>
               <Form.Control
                 type="number"
                 placeholder="Enter countInStock"
@@ -176,7 +176,7 @@ export const ProductEditScreen = () => {
             </Form.Group>
 
             <Form.Group controlId="category">
-              <Form.Label>Category</Form.Label>
+              <Form.Label>Loại</Form.Label>
               <Form.Control
                 type="text"
                 placeholder="Enter category"
@@ -186,7 +186,7 @@ export const ProductEditScreen = () => {
             </Form.Group>
 
             <Form.Group controlId="description">
-              <Form.Label>Description</Form.Label>
+              <Form.Label>Mô tả</Form.Label>
               <ReactQuill
                 theme="snow"
                 value={description}
@@ -205,7 +205,7 @@ export const ProductEditScreen = () => {
               variant="primary"
               style={{ marginTop: "1rem" }}
             >
-              Update
+              Cập nhật
             </Button>
           </Form>
         )}
