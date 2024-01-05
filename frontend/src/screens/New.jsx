@@ -12,7 +12,7 @@ export const New = () => {
         <Col sm={3}>
           <Nav variant="pills" className="flex-column">
             <Nav.Item>
-              <Nav.Link eventKey="customer">News</Nav.Link>
+              <Nav.Link eventKey="customer">Khách hàng</Nav.Link>
             </Nav.Item>
             <Nav.Item>
               <Nav.Link eventKey="ship">Vận chuyển</Nav.Link>

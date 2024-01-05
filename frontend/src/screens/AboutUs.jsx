@@ -1,6 +1,6 @@
 import React from "react";
-import { Container, Row, Col, Image } from "react-bootstrap";
-import qrzalo from "../assets/qr_zalo.jpg";
+import { Container, Image } from "react-bootstrap";
+
 import gioithieu1 from "../assets/gioithieu1.jpg";
 import gioithieu2 from "../assets/gioithieu2.jpg";
 
@@ -63,25 +63,22 @@ export const AboutUs = () => {
         </li>
         <li>Giao hàng tận kho/ tận tay khách hàng.</li>
       </ul>
-      <Row className="container">
-        <Col lg={6}>
-          <p>
-            Liên hệ với ASIABUY để được tư vấn và hỗ trợ mua hộ hàng hóa Trung
-            Quốc ngay hôm nay!
-          </p>
-          <p>
-            Địa chỉ văn phòng: 110 Ngũ Hành Sơn, Phường Mỹ An, Quận Ngũ Hành
-            Sơn, Thành phố Đà Nẵng, Vietnam. <br />
-            Hotline: 0796 690 609 <br />
-            G.Đốc: 0933 244 852 (Mr.Tuấn) <br />
-            P.kinh doanh: 0934 095 782 (Miss.Huệ)
-            <br /> Gmail: asiabuy.logistics01@gmail.com.
-          </p>
-        </Col>
-        <Col lg={6}>
-          <Image style={{ width: "250px" }} src={qrzalo} rounded />
-        </Col>
-      </Row>
+
+      <p>
+        Liên hệ với ASIABUY để được tư vấn và hỗ trợ mua hộ hàng hóa Trung Quốc
+        ngay hôm nay!
+      </p>
+      <p>
+        Địa chỉ văn phòng: 110 Ngũ Hành Sơn, Phường Mỹ An, Quận Ngũ Hành Sơn,
+        Thành phố Đà Nẵng, Vietnam. <br />
+        Hotline: 0796 690 609 <br />
+        Giám đốc: 0933 244 852 (Ms.Thoan)
+        <br />
+        P.kinh doanh: 0934 095 782 (Miss.Huệ)
+        <br /> Gmail: asiabuy.logistics01@gmail.com.
+        <br />
+        Mã số thuế: 0402217588
+      </p>
     </Container>
   );
 };

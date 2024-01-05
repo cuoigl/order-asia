@@ -8,18 +8,20 @@ import { Message } from "../components/Message";
 import { Paginate } from "../components/Paginate";
 import { Banner } from "../components/Banner";
 import { Meta } from "../components/Meta";
+import { Categories } from "../components/Categories";
 
 export const HomeScreen = () => {
-  const { pageNumber, keyword } = useParams();
+  const { pageNumber, keyword, category } = useParams();
 
   const { data, isLoading, error } = useGetProductsQuery({
     keyword,
+    category,
     pageNumber,
   });
 
   return (
     <>
-      {!keyword ? (
+      {!keyword && !category ? (
         <Banner />
       ) : (
         <Link to="/" className="btn btn-light mb-4">
@@ -36,6 +38,7 @@ export const HomeScreen = () => {
         <>
           <Meta />
           <h1 className="mt-5">Danh sách sản phẩm</h1>
+          <Categories />
           <Row>
             {data.products.map((product) => (
               <Col key={product._id} xs={6} sm={6} md={6} lg={4} xl={3}>

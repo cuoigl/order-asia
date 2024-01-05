@@ -10,6 +10,8 @@ import {
   useUpdateProductMutation,
 } from "../../slices/productsApiSlice";
 import axios from "axios";
+import ReactQuill from "react-quill";
+import "react-quill/dist/quill.snow.css";
 
 export const ProductEditScreen = () => {
   const endpoint = "https://api.cloudinary.com/v1_1/dqqkpaowz/image/upload";
@@ -185,12 +187,17 @@ export const ProductEditScreen = () => {
 
             <Form.Group controlId="description">
               <Form.Label>Description</Form.Label>
-              <Form.Control
-                type="text"
+              <ReactQuill
+                theme="snow"
+                value={description}
+                onChange={setDescription}
+              />
+              {/* <Form.Control
+                as="textarea"
+                rows={3}
                 placeholder="Enter description"
                 value={description}
-                onChange={(e) => setDescription(e.target.value)}
-              ></Form.Control>
+              ></Form.Control> */}
             </Form.Group>
 
             <Button
