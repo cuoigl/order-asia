@@ -38,7 +38,7 @@ export const ProductScreen = () => {
         </Modal.Header>
         <Modal.Body>
           <p>
-            ĐĐịa chỉ văn phòng: 110 Ngũ Hành Sơn, Phường Mỹ An, Quận Ngũ Hành
+            Địa chỉ văn phòng: 110 Ngũ Hành Sơn, Phường Mỹ An, Quận Ngũ Hành
             Sơn, Thành phố Đà Nẵng, Vietnam. Sơn, Thành phố Đà Nẵng, Vietnam.{" "}
             <br />
             Hotline: 0796 690 609 <br />
