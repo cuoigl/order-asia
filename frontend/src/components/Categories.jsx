@@ -11,6 +11,7 @@ export const Categories = () => {
     navigate(`/categories/${e.target.value.trim()}`);
   };
   const { data: categories, isLoading, error } = useGetCategoriesQuery({});
+  console.log(categories);
   return isLoading ? null : error ? (
     <Message variant="danger">{error?.data?.message || error.error}</Message>
   ) : (

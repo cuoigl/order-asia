@@ -95,8 +95,14 @@ export const Header = () => {
                   <LinkContainer to="/admin/productlist">
                     <NavDropdown.Item>Sản phẩm</NavDropdown.Item>
                   </LinkContainer>
+                  <LinkContainer to="/admin/newlist">
+                    <NavDropdown.Item>Tin tức</NavDropdown.Item>
+                  </LinkContainer>
                   <LinkContainer to="/admin/userlist">
                     <NavDropdown.Item>Người dùng</NavDropdown.Item>
+                  </LinkContainer>
+                  <LinkContainer to="/admin/pricing">
+                    <NavDropdown.Item>Phí vận chuyển</NavDropdown.Item>
                   </LinkContainer>
                 </NavDropdown>
               )}

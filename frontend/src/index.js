@@ -40,6 +40,10 @@ import { UserEditScreen } from "./screens/admin/UserEditScreen";
 import { New } from "./screens/New";
 import { AboutUs } from "./screens/AboutUs";
 import { Pricing } from "./screens/Pricing";
+import { NewListScreen } from "./screens/admin/NewListScreen";
+import { NewEditScreen } from "./screens/admin/NewEditScreen";
+import { NewCreateScreen } from "./screens/admin/NewCreateScreen";
+import { PricingEditScreen } from "./screens/admin/PricingEditScreen";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -76,6 +80,8 @@ const router = createBrowserRouter(
       {/* Admin users */}
       <Route path="" element={<AdminRoute />}>
         <Route path="/admin/orderlist" element={<OrderListScreen />} />
+        <Route path="/admin/newlist" element={<NewListScreen />} />
+        <Route path="/admin/pricing" element={<PricingEditScreen />} />
         <Route path="/admin/productlist" element={<ProductListScreen />} />
         <Route
           path="/admin/productlist/:pageNumber"
@@ -84,6 +90,8 @@ const router = createBrowserRouter(
         <Route path="/admin/userlist" element={<UserListScreen />} />
         <Route path="/admin/product/:id/edit" element={<ProductEditScreen />} />
         <Route path="/admin/user/:id/edit" element={<UserEditScreen />} />
+        <Route path="/admin/new/:id/edit" element={<NewEditScreen />} />
+        <Route path="/admin/new/create" element={<NewCreateScreen />} />
       </Route>
     </Route>
   )

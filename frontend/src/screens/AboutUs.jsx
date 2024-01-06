@@ -46,7 +46,7 @@ export const AboutUs = () => {
         />
       </div>
 
-      <h5>Lợi thế của chúng tôi:</h5>
+      <h5 className="mt-3">Lợi thế của chúng tôi:</h5>
       <ul>
         <li>
           Đội ngũ nhân viên chuyên nghiệp, giàu kinh nghiệm, am hiểu thị trường
@@ -68,17 +68,18 @@ export const AboutUs = () => {
         Liên hệ với ASIABUY để được tư vấn và hỗ trợ mua hộ hàng hóa Trung Quốc
         ngay hôm nay!
       </p>
-      <p>
-        Địa chỉ văn phòng: 110 Ngũ Hành Sơn, Phường Mỹ An, Quận Ngũ Hành Sơn,
-        Thành phố Đà Nẵng, Vietnam. <br />
-        Hotline: 0796 690 609 <br />
-        Giám đốc: 0933 244 852 (Ms.Thoan)
-        <br />
-        P.kinh doanh: 0934 095 782 (Mis.Huệ)
-        <br /> Gmail: asiabuy.logistics01@gmail.com.
-        <br />
-        Mã số thuế: 0402217588
-      </p>
+
+      <h5>Thông tin liên hệ:</h5>
+      <ul>
+        <li>
+          Địa chỉ văn phòng: 110 Ngũ Hành Sơn, Phường Mỹ An, Quận Ngũ Hành Sơn,
+          Thành phố Đà Nẵng, Vietnam.
+        </li>
+        <li>Hotline: 0796 690 609</li>
+        <li>Giám đốc: 0933 244 852 (Ms.Thoan)</li>
+        <li>Gmail: asiabuy.logistics01@gmail.com</li>
+        <li>Mã số thuế: 0402217588</li>
+      </ul>
     </Container>
   );
 };

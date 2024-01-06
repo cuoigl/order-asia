@@ -1,15 +1,17 @@
-import { Container, Row, Col, Image } from "react-bootstrap";
+import { Container, Row, Col } from "react-bootstrap";
 import { FaFacebookF } from "react-icons/fa6";
+import { FaTiktok } from "react-icons/fa";
 import { SiZalo } from "react-icons/si";
+import { FaYoutube } from "react-icons/fa";
+import { FaInstagram } from "react-icons/fa";
 import logo from "../assets/logo.png";
-import qrzalo from "../assets/qr_zalo.jpg";
 
 export const Footer = () => {
   return (
     <footer className="background-footer">
       <Container>
         <Row>
-          <Col className="py-3" lg={3} xl={5}>
+          <Col className="py-3" lg={3} xl={6}>
             <img src={logo} alt="" />
             <p>CÔNG TY TNHH THƯƠNG MẠI QUỐC TẾ ASIABUY</p>
             <p>
@@ -31,25 +33,43 @@ export const Footer = () => {
               referrerPolicy="no-referrer-when-downgrade"
             ></iframe>
           </Col>
-          <Col lg={3} xl={3} className="py-3">
-            <div className=" d-flex">
-              <a href="https://www.facebook.com/asiabuy.logistics">
-                <div className="icon-footer">
-                  <FaFacebookF />
-                </div>
-              </a>
-              <a
-                style={{ lineHeight: "40px", marginLeft: "8px" }}
-                href="https://www.facebook.com/asiabuy.logistics"
-              >
-                fb.com/asiabuy.logistics
-              </a>
-            </div>
-            <div className="icon-footer">
-              <div>
-                <SiZalo />
+          <Col lg={3} xl={2} className="py-3">
+            <div className="ms-2">
+              <div className="py-1">
+                <a href="https://www.facebook.com/asiabuy.logistics">
+                  <div className="icon-footer">
+                    <FaFacebookF />
+                  </div>
+                </a>
               </div>
-              <Image style={{ width: "200px" }} src={qrzalo} rounded />
+              <div className="py-1">
+                <a href="https://zalo.me/0796690609">
+                  <div className="icon-footer">
+                    <SiZalo />
+                  </div>
+                </a>
+              </div>
+              <div className="py-1">
+                <a href="https://www.tiktok.com/@asiabuy1?is_from_webapp=1&sender_device=pc">
+                  <div className="icon-footer">
+                    <FaTiktok />
+                  </div>
+                </a>
+              </div>
+              <div className="py-1">
+                <a href="https://www.youtube.com/channel/UCFnn1X9_MkjTQFrQS6VnKkA">
+                  <div className="icon-footer">
+                    <FaYoutube />
+                  </div>
+                </a>
+              </div>
+              <div className="py-1">
+                <a href="https://www.instagram.com/aisiabuy/">
+                  <div className="icon-footer">
+                    <FaInstagram />
+                  </div>
+                </a>
+              </div>
             </div>
           </Col>
         </Row>

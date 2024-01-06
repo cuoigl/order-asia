@@ -1,25 +1,22 @@
-import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 
-import img from "../assets/sample.jpg";
-
-export const News = () => {
+export const News = ({ newDetail }) => {
   return (
-    <Card>
+    <Card className="mb-2">
       <Row>
         <Col lg={3}>
-          <Card.Img variant="top" src={img} />
+          <Card.Img variant="top" src={newDetail.image} />
         </Col>
         <Col>
           <Card.Body>
-            <Card.Title>Card Title</Card.Title>
+            <Card.Title>{newDetail.title}</Card.Title>
             <Card.Text>
-              Some quick example text to build on the card title and make up the
-              bulk of the card's content.
+              <div
+                dangerouslySetInnerHTML={{ __html: newDetail.description }}
+              />
             </Card.Text>
-            <Button variant="primary">Go somewhere</Button>
           </Card.Body>
         </Col>
       </Row>
