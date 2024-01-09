@@ -1,14 +1,13 @@
 import React, { useEffect, useState } from "react";
-import { Table, Form, Button, Row, Col } from "react-bootstrap";
-import { LinkContainer } from "react-router-bootstrap";
+import { Form, Button, Col, Container } from "react-bootstrap";
+
 import { useDispatch, useSelector } from "react-redux";
-import { FaTimes } from "react-icons/fa";
 
 import { toast } from "react-toastify";
-import { Message } from "../components/Message";
+
 import { Loader } from "../components/Loader";
 import { useProfileMutation } from "../slices/usersApiSlice";
-import { useGetMyOrdersQuery } from "../slices/ordersApiSlice";
+
 import { setCredentials } from "../slices/authSlice";
 
 export const ProfileScreen = () => {
@@ -18,8 +17,6 @@ export const ProfileScreen = () => {
   const [confirmPassword, setConfirmPassword] = useState("");
 
   const { userInfo } = useSelector((state) => state.auth);
-
-  const { data: orders, isLoading, error } = useGetMyOrdersQuery();
 
   const [updateProfile, { isLoading: loadingUpdateProfile }] =
     useProfileMutation();
@@ -53,13 +50,13 @@ export const ProfileScreen = () => {
   };
 
   return (
-    <Row>
-      <Col md={3}>
-        <h2>User Profile</h2>
+    <Container>
+      <Col md={5}>
+        <h2>Thông tin người dùng</h2>
 
         <Form onSubmit={submitHandler}>
           <Form.Group className="my-2" controlId="name">
-            <Form.Label>Name</Form.Label>
+            <Form.Label>Tên</Form.Label>
             <Form.Control
               type="text"
               placeholder="Enter name"
@@ -69,7 +66,7 @@ export const ProfileScreen = () => {
           </Form.Group>
 
           <Form.Group className="my-2" controlId="email">
-            <Form.Label>Email Address</Form.Label>
+            <Form.Label>Địa chỉ email</Form.Label>
             <Form.Control
               type="email"
               placeholder="Enter email"
@@ -79,7 +76,7 @@ export const ProfileScreen = () => {
           </Form.Group>
 
           <Form.Group className="my-2" controlId="password">
-            <Form.Label>Password</Form.Label>
+            <Form.Label>Mật khẩu</Form.Label>
             <Form.Control
               type="password"
               placeholder="Enter password"
@@ -89,7 +86,7 @@ export const ProfileScreen = () => {
           </Form.Group>
 
           <Form.Group className="my-2" controlId="confirmPassword">
-            <Form.Label>Confirm Password</Form.Label>
+            <Form.Label>Xác nhận mật khẩu</Form.Label>
             <Form.Control
               type="password"
               placeholder="Confirm password"
@@ -99,12 +96,12 @@ export const ProfileScreen = () => {
           </Form.Group>
 
           <Button type="submit" variant="primary">
-            Update
+            Cập nhật
           </Button>
           {loadingUpdateProfile && <Loader />}
         </Form>
       </Col>
-      <Col md={9}>
+      {/* <Col md={9}>
         <h2>My Orders</h2>
         {isLoading ? (
           <Loader />
@@ -156,7 +153,7 @@ export const ProfileScreen = () => {
             </tbody>
           </Table>
         )}
-      </Col>
-    </Row>
+      </Col> */}
+    </Container>
   );
 };
