@@ -23,7 +23,7 @@ export const Footer = () => {
             </p>
             <p style={{ lineHeight: "normal" }}>Hotline: 0796690690</p>
             <p style={{ lineHeight: "normal" }}>
-              P.Kinh doanh: 0796690690 (Ms.Huệ)
+              P.Kinh doanh: 0934095782 (Ms.Huệ)
             </p>
             <p style={{ lineHeight: "normal" }}>G.Đốc: 0933244852 (Ms.Thoan)</p>
             <p style={{ lineHeight: "normal" }}>
