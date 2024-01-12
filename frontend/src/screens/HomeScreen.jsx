@@ -50,6 +50,7 @@ export const HomeScreen = () => {
             pages={data.pages}
             page={data.page}
             keyword={keyword ? keyword : ""}
+            category={category ? category : ""}
           />
         </>
       )}
