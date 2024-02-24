@@ -43,8 +43,6 @@ export const ProductScreen = () => {
             <br />
             Hotline: 0796 690 609 <br />
             Giám đốc: 0933 244 852 (Ms.Thoan)
-            <br />
-            P.kinh doanh: 0934 095 782 (Mis.Huệ)
             <br /> Gmail: asiabuy.logistics01@gmail.com.
           </p>
         </Modal.Body>

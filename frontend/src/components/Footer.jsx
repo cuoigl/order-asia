@@ -22,9 +22,9 @@ export const Footer = () => {
               Thành phố Đà Nẵng, Việt Nam
             </p>
             <p style={{ lineHeight: "normal" }}>Hotline: 0796690690</p>
-            <p style={{ lineHeight: "normal" }}>
+            {/* <p style={{ lineHeight: "normal" }}>
               P.Kinh doanh: 0934095782 (Ms.Huệ)
-            </p>
+            </p> */}
             <p style={{ lineHeight: "normal" }}>G.Đốc: 0933244852 (Ms.Thoan)</p>
             <p style={{ lineHeight: "normal" }}>
               Email: asiabuy.logistics01@gmail.com
